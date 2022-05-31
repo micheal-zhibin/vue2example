@@ -1,17 +1,33 @@
 <template>
   <div id="app">
     <img alt="Vue logo" src="../assets/logo.png" />
+    <div>count: {{count}}</div>
+    <button v-on:click="add">add</button>
     <HelloWorld msg="Welcome to Your Vue.js App" />
   </div>
 </template>
 
 <script>
 import HelloWorld from '../components/HelloWorld.vue';
+import { mapActions } from 'vuex';
 
 export default {
   name: 'App',
   components: {
     HelloWorld
+  },
+  computed: {
+    count () {
+      return this.$store.state.count
+    }
+  },
+  methods: {
+    ...mapActions([
+      'increment', // 将 `this.increment()` 映射为 `this.$store.dispatch('increment')`
+    ]),
+    ...mapActions({
+      add: 'increment' // 将 `this.add()` 映射为 `this.$store.dispatch('increment')`
+    })
   },
 };
 </script>
