@@ -1,18 +1,15 @@
 <template>
-  <div id="app">
-    <router-view></router-view>
-  </div>
+  <div id="page">GoodBye</div>
 </template>
 
 <script>
-
 export default {
-  name: 'App',
+  name: 'GoodBye',
 };
 </script>
 
 <style scoped>
-#app {
+#page {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;

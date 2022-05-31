@@ -1,18 +1,15 @@
 <template>
-  <div id="app">
-    <router-view></router-view>
-  </div>
+  <div id="page">404</div>
 </template>
 
 <script>
-
 export default {
-  name: 'App',
+  name: 'Error',
 };
 </script>
 
 <style scoped>
-#app {
+#page {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
