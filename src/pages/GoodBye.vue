@@ -1,5 +1,5 @@
 <template>
-  <div id="page">GoodBye</div>
+  <div id="page">GoodBye world 222</div>
 </template>
 
 <script>

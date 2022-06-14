@@ -10,11 +10,17 @@
 <script>
 import HelloWorld from '../components/HelloWorld.vue';
 import { mapActions } from 'vuex';
+import moment from 'moment';
 
 export default {
   name: 'App',
   components: {
     HelloWorld
+  },
+  mounted() {
+    this.$nextTick(function () {
+      console.log('--now--', new moment());
+    })
   },
   computed: {
     count () {
